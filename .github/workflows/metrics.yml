@@ -1,0 +1,42 @@
+name: Metrics
+
+on:
+  schedule:
+    - cron: "17 1 * * *"   # 每天 UTC 01:17 更新 / update daily
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Generate metrics SVG
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          config: >-
+            {
+              "base": {
+                "header": false,
+                "title": false
+              },
+              "plugin": {
+                "activity": { "enabled": true, "limit": 14, "days": 365 },
+                "community": { "enabled": true, "files": 6 },
+                "languages": { "enabled": true, "limit": 8, "detailed": true },
+                "repositories": { "enabled": true, "limit": 8, "affiliations": "owner" },
+                "issues": { "enabled": true, "opened": true, "closed": false, "pull_requests": false },
+                "lines": { "enabled": true, "loc": true, "clock": 0 }
+              }
+            }
+
+      - name: Keep only the SVG
+        run: |
+          find . -maxdepth 1 -name "*.svg" ! -name "metrics.svg" -delete
+          find . -maxdepth 2 -name "*.svg" -path "./assets/*" -delete 2>/dev/null || true

@@ -1,0 +1,27 @@
+name: Generate snake animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 每天零点更新 / update once a day
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate Snake SVG
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+
+      - name: Commit snake to repo
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: output
+          commit_message: "chore: regenerate snake animation"
