@@ -20,23 +20,25 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          config: >-
-            {
-              "base": {
-                "header": false,
-                "title": false
-              },
-              "plugin": {
-                "activity": { "enabled": true, "limit": 14, "days": 365 },
-                "community": { "enabled": true, "files": 6 },
-                "languages": { "enabled": true, "limit": 8, "detailed": true },
-                "repositories": { "enabled": true, "limit": 8, "affiliations": "owner" },
-                "issues": { "enabled": true, "opened": true, "closed": false, "pull_requests": false },
-                "lines": { "enabled": true, "loc": true, "clock": 0 }
-              }
-            }
-
-      - name: Keep only the SVG
-        run: |
-          find . -maxdepth 1 -name "*.svg" ! -name "metrics.svg" -delete
-          find . -maxdepth 2 -name "*.svg" -path "./assets/*" -delete 2>/dev/null || true
+          user: ${{ github.repository_owner }}
+          filename: metrics.svg
+          # 基础信息
+          base: header, title
+          base_indepth: true
+          # 插件
+          plugin_community: true
+          plugin_languages: true
+          plugin_languages_details: true
+          plugin_languages_limit: 8
+          plugin_repositories: true
+          plugin_repositories_limit: 8
+          plugin_repositories_affiliations: owner
+          plugin_lines: true
+          plugin_lines_sections: enabled
+          plugin_stars: true
+          plugin_licenses: true
+          plugin_habits: true
+          plugin_habits_days: 30
+          plugin_topics: true
+          plugin_topics_limit: 12
+          plugin_activity: false
