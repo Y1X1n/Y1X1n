@@ -24,24 +24,30 @@
 
 - ✅ 每个项目都写测试、写文档、配 CI
 - 🧠 相信**小工具解决真问题**，一个仓库只干一件事
-- 💼 **在校生，开放实习** · 北京 / 全远程
-  方向：**AI Agent 与开发者工具**（DeepSeek Harness 生态）
-  沿这条线给 6 个生态项目的 **7 个 PR 被合并**，`dsh-prompt-optimizer` 已迭代到 v0.4.0
-  📮 [1781688201@qq.com](mailto:1781688201@qq.com)
+- 🌱 沿 AI Agent 工具链持续深耕，不到处撒网
 
 </td>
 <td valign="top" width="50%">
 
 - ✅ Tests, docs and CI on every project I ship
 - 🧠 Small tools that solve real problems — one repo, one job
-- 💼 **Student, open to internships** · Beijing / fully remote
-  Focus: **AI agents & developer tooling** (DeepSeek Harness ecosystem)
-  **7 PRs merged** across 6 projects in that ecosystem; `dsh-prompt-optimizer` is at v0.4.0
-  📮 [1781688201@qq.com](mailto:1781688201@qq.com)
+- 🌱 Going deep on the AI-agent toolchain rather than spreading thin
 
 </td>
 </tr>
 </table>
+
+### 💼 开放实习 / Open to internships
+
+**在校生** · 北京 / 全远程 · 方向 **AI Agent 与开发者工具**（DeepSeek Harness 生态）
+Student · Beijing or fully remote · targeting **AI agents & developer tooling**
+
+| 可验证的 / Evidence | |
+| --- | --- |
+| 开源协作 | 给 6 个生态项目提交 PR，**7 个被合并** · 7 PRs merged across 6 projects |
+| 在维护 | `dsh-prompt-optimizer` ⭐19 · MIT · CI · **21 个 release**，当前 v0.4.0 |
+| 工程习惯 | 15 个测试文件 · 28 份文档 · 3 个仓库配了 CI |
+| 📮 联系方式 | [1781688201@qq.com](mailto:1781688201@qq.com) |
 
 ### 💬 有想法？开个 Issue 就行
 
@@ -56,45 +62,21 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 
 ## 🚀 旗舰项目 / Flagship Projects
 
-### 🧩 [dsh-prompt-optimizer](https://github.com/Y1X1n/dsh-prompt-optimizer)
+### 🧩 [dsh-prompt-optimizer](https://github.com/Y1X1n/dsh-prompt-optimizer) &nbsp;·&nbsp; <sub>DeepSeek Harness 提示词优化插件</sub>
 
-<a href="https://github.com/Y1X1n/dsh-prompt-optimizer/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-prompt-optimizer?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/license-MIT-10B981?style=flat-square" alt="MIT" />
-<img src="https://img.shields.io/badge/~5.3K_LOC-22D3EE?style=flat-square" alt="LOC" />
-<img src="https://img.shields.io/badge/28_docs-A78BFA?style=flat-square" alt="docs" />
+<a href="https://github.com/Y1X1n/dsh-prompt-optimizer/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-prompt-optimizer?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/license-MIT-10B981?style=flat-square" alt="MIT" /> <img src="https://img.shields.io/badge/~5.3K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/28_docs-A78BFA?style=flat-square" alt="docs" />
 
-> **DeepSeek Harness 提示词优化插件** —— 唯一一个按正式开源项目标准做事的仓库
->
-> Prompt optimizer for DeepSeek Harness — the one repo I treat like a real open-source project
+中英双语文档（`README.md` / `README.en.md`）、简化版 README、`CONTRIBUTING.md`、promotion 素材全套，共 28 份文档；遵循 DSH 插件规范，含 `cordis.patch.yml`；MIT 许可，配 GitHub Actions。21 个 release 已迭代到 v0.4.0，macOS 端由 [@ruijiaang-lab](https://github.com/ruijiaang-lab) 开发。
 
-中英双语文档（`README.md` / `README.en.md`）、简化版 README、`CONTRIBUTING.md`、promotion 素材全套，共 28 份文档；遵循 DSH 插件规范，含 `cordis.patch.yml`；MIT 许可，配 GitHub Actions。macOS 端由 [@ruijiaang-lab](https://github.com/ruijiaang-lab) 开发。
+### 🖥️ [we-for-vscode](https://github.com/Y1X1n/we-for-vscode) &nbsp;·&nbsp; <sub>Wallpaper Engine × VS Code</sub>
 
-### 🖥️ [we-for-vscode](https://github.com/Y1X1n/we-for-vscode)
+<a href="https://github.com/Y1X1n/we-for-vscode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/we-for-vscode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" /> <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white" alt="WebGL" /> <img src="https://img.shields.io/badge/~9.1K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/15_tests-A78BFA?style=flat-square" alt="tests" />
 
-<a href="https://github.com/Y1X1n/we-for-vscode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/we-for-vscode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a>
-<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
-<img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white" alt="WebGL" />
-<img src="https://img.shields.io/badge/~9.1K_LOC-22D3EE?style=flat-square" alt="LOC" />
-<img src="https://img.shields.io/badge/15_tests-A78BFA?style=flat-square" alt="tests" />
+液态玻璃（glassmorphism）壁纸面板铺满整窗；Scene / Web 壁纸**实时渲染**而非静图；WebGL 引擎打包进扩展，零外部依赖。代码量最大，也是目前唯一每天都在提交的项目：15 个测试文件、CHANGELOG、`docs/ENGINEERING-NOTES.zh.md` 工程笔记、双语 README。
 
-> **把本机 Wallpaper Engine 壁纸渲染进 VS Code** —— 代码量最大，也是唯一每天都在动的项目
->
-> Render local Wallpaper Engine wallpapers inside VS Code — my largest codebase, touched daily
+### 🔐 [dsh-like-zcode](https://github.com/Y1X1n/dsh-like-zcode) &nbsp;·&nbsp; <sub>代码库全量备份，自建服务器</sub>
 
-液态玻璃（glassmorphism）壁纸面板铺满整窗；Scene / Web 壁纸**实时渲染**而非静图；WebGL 引擎打包进扩展，零外部依赖。15 个测试文件、CHANGELOG、`docs/ENGINEERING-NOTES.zh.md` 工程笔记、双语 README。
-
-### 🔐 [dsh-like-zcode](https://github.com/Y1X1n/dsh-like-zcode)
-
-<a href="https://github.com/Y1X1n/dsh-like-zcode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-like-zcode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/~5.0K_LOC-22D3EE?style=flat-square" alt="LOC" />
-<img src="https://img.shields.io/badge/9_tests-A78BFA?style=flat-square" alt="tests" />
-<img src="https://img.shields.io/badge/MIT-10B981?style=flat-square" alt="MIT" />
-
-> **致敬 ZCode「静默备份」事件** —— 全量代码库备份到**你自己的**服务器
->
-> A tribute to the ZCode silent-backup incident — full codebase backup to *your own* server
+<a href="https://github.com/Y1X1n/dsh-like-zcode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-like-zcode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/~5.0K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/9_tests-A78BFA?style=flat-square" alt="tests" /> <img src="https://img.shields.io/badge/MIT-10B981?style=flat-square" alt="MIT" />
 
 备份目的地由你自己填写，默认关闭，私钥在你手里，带宽你限速；会话内零通知，进度只在插件设置页。附 `docs/DESIGN.md` 与 `docs/BACKENDS.md`。
 
@@ -162,20 +144,12 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 
 ---
 
-## 📌 精选项目 / Selected Work
-
-| 📦 仓库 / Repo | 📊 规模 / Size | ✨ 亮点 / Highlights |
-| --- | --- | --- |
-| [**we-for-vscode**](https://github.com/Y1X1n/we-for-vscode) | ~9.1K 行 · 15 测试 | Wallpaper Engine × VS Code，WebGL 实时渲染 |
-| [**dsh-prompt-optimizer**](https://github.com/Y1X1n/dsh-prompt-optimizer) | ~5.3K 行 · 28 文档 | DSH 提示词优化，MIT，双语文档齐全 |
-| [**dsh-like-zcode**](https://github.com/Y1X1n/dsh-like-zcode) | ~5.0K 行 · 9 测试 | 自建服务器全量备份，默认关闭、零通知 |
+<div align="center">
 
 其他实验性小工具与 Fork 见 [全部仓库](https://github.com/Y1X1n?tab=repositories)。
 Smaller experiments and forks live in [all repositories](https://github.com/Y1X1n?tab=repositories).
 
----
-
-<div align="center">
+<br/>
 
 **⭐ 如果某个工具帮到了你，点个 Star 就是最大的鼓励。**
 **If one of these tools helped you, a star means the world to me.**
