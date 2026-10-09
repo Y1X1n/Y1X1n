@@ -22,16 +22,12 @@
 <tr>
 <td valign="top" width="50%">
 
-- 🧩 主攻 **DeepSeek Harness（DSH）插件生态**
-- 🖥️ 把本机 **Wallpaper Engine 壁纸**用 WebGL 搬进 VS Code
 - ✅ 每个项目都写测试、写文档、配 CI
 - 🧠 相信**小工具解决真问题**，一个仓库只干一件事
 
 </td>
 <td valign="top" width="50%">
 
-- 🧩 Building plugins for **DeepSeek Harness (DSH)**
-- 🖥️ Rendering local **Wallpaper Engine** wallpapers in VS Code via WebGL
 - ✅ Tests, docs and CI on every project I ship
 - 🧠 Small tools that solve real problems — one repo, one job
 
