@@ -7,10 +7,7 @@
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" />
-<img src="https://img.shields.io/badge/repos-19-A78BFA?style=flat-square&label=Repos" alt="repos" />
-<img src="https://img.shields.io/badge/stars-31-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" />
-<img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
+<a href="mailto:1781688201@qq.com"><img src="https://img.shields.io/badge/%F0%9F%93%AC%201788201%40qq.com-22D3EE?style=flat-square&label=%E2%9C%89%20Mail&logo=maildotru&logoColor=black" alt="email" /></a> <img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" /> <img src="https://img.shields.io/badge/repos-19-A78BFA?style=flat-square&label=Repos" alt="repos" /> <img src="https://img.shields.io/badge/stars-31-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" /> <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
 
 </div>
 
@@ -47,7 +44,6 @@ Student · Beijing or fully remote · targeting **AI agents & developer tooling*
 | 开源协作 | 给 6 个生态项目提交 PR，**7 个被合并** · 7 PRs merged across 6 projects |
 | 在维护 | `dsh-prompt-optimizer` ⭐19 · MIT · CI · **21 个 release**，当前 v0.4.0 |
 | 工程习惯 | 15 个测试文件 · 28 份文档 · 3 个仓库配了 CI |
-| 📮 联系方式 | [1781688201@qq.com](mailto:1781688201@qq.com) |
 
 ### 💬 有想法？开个 Issue 就行
 
