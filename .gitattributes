@@ -1,1 +1,5 @@
+# 保持仓库内文本文件统一用 LF，避免 Windows 上产生纯换行符 diff
+* text=auto eol=lf
+
+# 生成的 SVG 按二进制处理，不做换行符转换
 *.svg binary
