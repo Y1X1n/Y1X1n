@@ -24,16 +24,33 @@
 
 - ✅ 每个项目都写测试、写文档、配 CI
 - 🧠 相信**小工具解决真问题**，一个仓库只干一件事
+- 💼 **在校生，开放实习** · 北京 / 全远程
+  方向：**AI Agent 与开发者工具**（DeepSeek Harness 生态）
+  沿这条线给 6 个生态项目的 **7 个 PR 被合并**，`dsh-prompt-optimizer` 已迭代到 v0.4.0
+  📮 [1781688201@qq.com](mailto:1781688201@qq.com)
 
 </td>
 <td valign="top" width="50%">
 
 - ✅ Tests, docs and CI on every project I ship
 - 🧠 Small tools that solve real problems — one repo, one job
+- 💼 **Student, open to internships** · Beijing / fully remote
+  Focus: **AI agents & developer tooling** (DeepSeek Harness ecosystem)
+  **7 PRs merged** across 6 projects in that ecosystem; `dsh-prompt-optimizer` is at v0.4.0
+  📮 [1781688201@qq.com](mailto:1781688201@qq.com)
 
 </td>
 </tr>
 </table>
+
+### 💬 有想法？开个 Issue 就行
+
+不用先发 PR、也不用客气。**配色方案、壁纸渲染的坑、插件 API 的改进、或者纯粹觉得某个项目该重写**——都欢迎在下面开 issue 聊聊。
+
+No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, plugin API ideas, or a plain "this repo should be rewritten"** — open an issue and let's talk.
+
+[![Issues](https://img.shields.io/github/issues/Y1X1n/Y1X1n?style=flat-square&label=Issues&logo=github&logoColor=white)](https://github.com/Y1X1n/Y1X1n/issues)
+[![Issue Contributors](https://img.shields.io/github/contributors/Y1X1n/Y1X1n?style=flat-square&label=Issue%20Contributors&logo=github&logoColor=white)](https://github.com/Y1X1n/Y1X1n/graphs/contributors)
 
 ---
 
