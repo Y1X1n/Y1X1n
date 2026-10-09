@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "charts/**"
 
 permissions:
   contents: write
@@ -22,83 +24,114 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # ---------- 1. 语言分布（来自 GitHub languages API，一次性、可靠） ----------
+      # ---------- 1. 语言分布（REST，逐仓库累加） ----------
       - name: Fetch language stats
         uses: actions/github-script@v7
         with:
           script: |
-            const axios = require('axios');
+            const fs = require("fs");
             const me = context.repo.owner;
-            const token = process.env.GITHUB_TOKEN;
+            const H = {
+              Authorization: `token ${process.env.GITHUB_TOKEN}`,
+              Accept: "application/vnd.github+json",
+              "User-Agent": "github-script",
+            };
+
             const repos = [];
             for (let p = 1; p <= 5; p++) {
-              const r = await axios.get(`https://api.github.com/users/${me}/repos?per_page=100&page=${p}&type=owner`, {
-                headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github+json' },
-              });
-              if (!r.data.length) break;
-              repos.push(...r.data);
+              const r = await fetch(
+                `https://api.github.com/users/${me}/repos?per_page=100&page=${p}&type=owner`,
+                { headers: H },
+              );
+              if (!r.ok) break;
+              const batch = await r.json();
+              if (!batch.length) break;
+              repos.push(...batch);
             }
+            core.info(`found ${repos.length} repositories`);
+
             const langs = {};
             for (const repo of repos) {
               if (repo.fork) continue;
               try {
-                const l = await axios.get(repo.languages_url, {
-                  headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github+json' },
-                });
-                for (const [k, v] of Object.entries(l.data)) langs[k] = (langs[k] || 0) + v;
-              } catch (e) { core.info(`lang fetch failed for ${repo.name}`); }
+                const r = await fetch(repo.languages_url, { headers: H });
+                if (!r.ok) continue;
+                const data = await r.json();
+                for (const [k, v] of Object.entries(data)) langs[k] = (langs[k] || 0) + v;
+              } catch (e) {
+                core.info(`languages failed for ${repo.name}: ${e.message}`);
+              }
             }
-            const total = Object.values(langs).reduce((a, b) => a + b, 0);
-            const sorted = Object.entries(langs).sort((a, b) => b[1] - a[1]).slice(0, 10)
-              .map(([k, v]) => ({ lang: k, bytes: v, pct: +((v / total) * 100).toFixed(1) }));
-            require('fs').writeFileSync('data/langs.json', JSON.stringify({ total, langs: sorted }, null, 2));
-            console.log(`aggregated ${sorted.length} languages, total ${total} bytes`);
 
-      # ---------- 2. 提交日历（GraphQL，单请求，不会超时） ----------
+            const total = Object.values(langs).reduce((a, b) => a + b, 0);
+            const sorted = Object.entries(langs)
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 10)
+              .map(([lang, bytes]) => ({
+                lang,
+                bytes,
+                pct: total ? +((bytes / total) * 100).toFixed(1) : 0,
+              }));
+
+            fs.mkdirSync("data", { recursive: true });
+            fs.writeFileSync("data/langs.json", JSON.stringify({ total, langs: sorted }, null, 2));
+            core.info(`aggregated ${sorted.length} languages / ${total} bytes`);
+
+      # ---------- 2. 提交日历（单次 GraphQL） ----------
       - name: Fetch contribution calendar
         uses: actions/github-script@v7
         with:
           script: |
-            const axios = require('axios');
-            const me = context.repo.owner;
-            const token = process.env.GITHUB_TOKEN;
+            const fs = require("fs");
+            const H = {
+              Authorization: `token ${process.env.GITHUB_TOKEN}`,
+              "Content-Type": "application/json",
+              "User-Agent": "github-script",
+            };
+
             let days = [];
             try {
-              const r = await axios.post('https://api.github.com/graphql', {
-                query: `query($login: String!) {
-                  user(login: $login) {
-                    contributionsCollection {
-                      contributionCalendar {
-                        weeks {
-                          contributionDays { date contributionCount contributionLevel }
+              const r = await fetch("https://api.github.com/graphql", {
+                method: "POST",
+                headers: H,
+                body: JSON.stringify({
+                  query: `query($login: String!) {
+                    user(login: $login) {
+                      contributionsCollection {
+                        contributionCalendar {
+                          weeks { contributionDays { date contributionCount contributionLevel } }
                         }
                       }
                     }
-                  }
-                }`,
-                variables: { login: me },
-              }, {
-                headers: { Authorization: `token ${token}` },
+                  }`,
+                  variables: { login: context.repo.owner },
+                }),
               });
-              const weeks = r.data.data.user.contributionsCollection.contributionCalendar.weeks;
-              days = weeks.flatMap(w => w.contributionDays);
+              const j = await r.json();
+              if (j.errors) throw new Error(JSON.stringify(j.errors));
+              const weeks = j.data.user.contributionsCollection.contributionCalendar.weeks;
+              days = weeks.flatMap((w) => w.contributionDays);
             } catch (e) {
-              core.info(`calendar fetch failed: ${e.message}`);
+              core.warning(`calendar fetch failed, rendering empty heatmap: ${e.message}`);
             }
-            require('fs').writeFileSync('data/calendar.json', JSON.stringify({ days }, null, 2));
-            console.log(`calendar: ${days.length} days`);
 
-      # ---------- 3. 渲染 SVG ----------
+            fs.mkdirSync("data", { recursive: true });
+            fs.writeFileSync("data/calendar.json", JSON.stringify({ days }, null, 2));
+            core.info(`calendar: ${days.length} days`);
+
+      # ---------- 3. 渲染（纯 node，无第三方依赖） ----------
       - name: Render SVG
-        run: |
-          mkdir -p dist
-          node scripts/render-charts.mjs data/langs.json data/calendar.json dist
+        run: node scripts/render-charts.mjs data/langs.json data/calendar.json charts
 
-      # ---------- 4. 提交回仓库 ----------
+      # ---------- 4. 回写仓库 ----------
       - name: Push charts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add charts/
-          git diff --cached --quiet || git commit -m "chore: update profile charts"
-          git push
+          if git diff --cached --quiet; then
+            echo "no chart changes"
+          else
+            git commit -m "chore: update profile charts"
+            git push
+          fi
