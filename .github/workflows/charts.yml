@@ -39,13 +39,15 @@ jobs:
 
             const repos = [];
             for (let p = 1; p <= 5; p++) {
-              const r = await fetch(
-                `https://api.github.com/users/${me}/repos?per_page=100&page=${p}&type=owner`,
-                { headers: H },
-              );
-              if (!r.ok) break;
+              const url = `https://api.github.com/users/${me}/repos?per_page=100&page=${p}&type=owner`;
+              const r = await fetch(url, { headers: H });
+              if (!r.ok) {
+                core.warning(`REPOS HTTP ${r.status} :: ${(await r.text()).slice(0, 300)}`);
+                break;
+              }
               const batch = await r.json();
-              if (!batch.length) break;
+              if (!Array.isArray(batch) || !batch.length) break;
+              core.info(`page ${p}: ${batch.length} repos`);
               repos.push(...batch);
             }
             core.info(`found ${repos.length} repositories`);
@@ -108,8 +110,10 @@ jobs:
                 }),
               });
               const j = await r.json();
-              if (j.errors) throw new Error(JSON.stringify(j.errors));
-              const weeks = j.data.user.contributionsCollection.contributionCalendar.weeks;
+              if (j.errors) {
+                core.warning(`GQL HTTP ${r.status} :: ${JSON.stringify(j.errors).slice(0, 400)}`);
+              }
+              const weeks = j?.data?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [];
               days = weeks.flatMap((w) => w.contributionDays);
             } catch (e) {
               core.warning(`calendar fetch failed, rendering empty heatmap: ${e.message}`);
