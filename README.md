@@ -139,18 +139,17 @@
 
 ## 📊 GitHub 数据 / GitHub Stats
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Y1X1n/Y1X1n/main/charts/langs.svg" alt="Most used languages" width="448" />
-  <img src="https://raw.githubusercontent.com/Y1X1n/Y1X1n/main/charts/calendar.svg" alt="Contribution graph" width="448" />
-</p>
-
 <div align="center">
 
-<img height="165" src="https://streak-stats.demolab.com?user=Y1X1n&hide_border=true&background=00000000&stroke=3B4261&ring=22D3EE&fire=F59E0B&currStreakNum=E2E8F0&sideNums=E2E8F0&currStreakLabel=22D3EE&sideLabels=94A3B8&dates=64748B" alt="GitHub streak" />
+<img height="150" src="https://streak-stats.demolab.com?user=Y1X1n&hide_border=true&background=00000000&stroke=3B4261&ring=22D3EE&fire=F59E0B&currStreakNum=E2E8F0&sideNums=E2E8F0&currStreakLabel=22D3EE&sideLabels=94A3B8&dates=64748B" alt="GitHub streak" />
 <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
 <img src="https://img.shields.io/github/commit-activity/m/Y1X1n?style=flat-square&label=%F0%9F%93%85%20Commits%2Fmonth" alt="commit activity" />
 
 </div>
+
+<p align="center">
+  <sub>语言构成：JavaScript 45% · TypeScript 17% · HTML 19% · Rust 5% · C# 5% · Python 4% · CSS 2% · Kotlin / PowerShell / Shell 1%</sub>
+</p>
 
 ---
 
