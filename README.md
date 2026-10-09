@@ -153,16 +153,6 @@
 
 ---
 
-## 🐍 贪吃蛇 · Snake
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Y1X1n/Y1X1n/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Y1X1n/Y1X1n/output/github-snake-light.svg" />
-  <img alt="snake animation" src="https://raw.githubusercontent.com/Y1X1n/Y1X1n/output/github-snake.svg" />
-</picture>
-
----
-
 ## 📌 精选项目 / Selected Work
 
 | 📦 仓库 / Repo | 💬 语言 / Lang | ⭐ | 📌 备注 / Note |
