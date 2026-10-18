@@ -7,7 +7,7 @@
 
 <br/>
 
-<a href="mailto:1781688201@qq.com"><img src="https://img.shields.io/badge/%F0%9F%93%AC%201788201%40qq.com-22D3EE?style=flat-square&label=%E2%9C%89%20Mail&logo=maildotru&logoColor=black" alt="email" /></a> <img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" /> <img src="https://img.shields.io/badge/repos-19-A78BFA?style=flat-square&label=Repos" alt="repos" /> <img src="https://img.shields.io/badge/stars-31-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" /> <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
+<a href="mailto:1781688201@qq.com"><img src="https://img.shields.io/badge/%F0%9F%93%AC%201788201%40qq.com-22D3EE?style=flat-square&label=%E2%9C%89%20Mail&logo=maildotru&logoColor=black" alt="email" /></a> <img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" /> <img src="https://img.shields.io/badge/repos-22-A78BFA?style=flat-square&label=Repos" alt="repos" /> <img src="https://img.shields.io/badge/stars-40-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" /> <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
 
 </div>
 
@@ -41,9 +41,9 @@ Student · Beijing or fully remote · targeting **AI agents & developer tooling*
 
 | 可验证的 / Evidence | |
 | --- | --- |
-| 开源协作 | 给 6 个生态项目提交 PR，**7 个被合并** · 7 PRs merged across 6 projects |
-| 在维护 | `dsh-prompt-optimizer` ⭐19 · MIT · CI · **21 个 release**，当前 v0.4.0 |
-| 工程习惯 | 15 个测试文件 · 28 份文档 · 3 个仓库配了 CI |
+| 开源协作 | 给 5 个生态项目提交 PR，**7 个被合并** · 7 PRs merged across 5 projects |
+| 在维护 | `dsh-prompt-optimizer` ⭐24 · MIT · CI · **23 个 release**，当前 **v0.6.0**（适配 dsh 0.2.1-rc.2） |
+| 工程习惯 | 4 个测试套件 / **91 项断言全绿** · 28 份文档 · 4 个仓库配了 CI |
 
 ### 💬 有想法？开个 Issue 就行
 
@@ -60,19 +60,21 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 
 ### 🧩 [dsh-prompt-optimizer](https://github.com/Y1X1n/dsh-prompt-optimizer) &nbsp;·&nbsp; <sub>DeepSeek Harness 提示词优化插件</sub>
 
-<a href="https://github.com/Y1X1n/dsh-prompt-optimizer/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-prompt-optimizer?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/license-MIT-10B981?style=flat-square" alt="MIT" /> <img src="https://img.shields.io/badge/~5.3K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/28_docs-A78BFA?style=flat-square" alt="docs" />
+<a href="https://github.com/Y1X1n/dsh-prompt-optimizer/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-prompt-optimizer?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/license-MIT-10B981?style=flat-square" alt="MIT" /> <img src="https://img.shields.io/badge/~3.4K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/28_docs-A78BFA?style=flat-square" alt="docs" /> <img src="https://img.shields.io/badge/91_tests-10B981?style=flat-square" alt="tests" />
 
-中英双语文档（`README.md` / `README.en.md`）、简化版 README、`CONTRIBUTING.md`、promotion 素材全套，共 28 份文档；遵循 DSH 插件规范，含 `cordis.patch.yml`；MIT 许可，配 GitHub Actions。21 个 release 已迭代到 v0.4.0，macOS 端由 [@ruijiaang-lab](https://github.com/ruijiaang-lab) 开发。
+中英双语文档（`README.md` / `README.en.md`）、简化版 README、`CONTRIBUTING.md`、promotion 素材全套，共 28 份文档；遵循 DSH 插件规范（`cordis.patch.yml` + `dsh.manifestVersion` + `engines.dsh` 兼容范围声明）；MIT 许可，配 GitHub Actions。23 个 release 已迭代到 **v0.6.0**：最新一版针对 **dsh 0.2.1-rc.2** 适配——修掉一处会让设置页抛未捕获异常的槽位注册问题，并把一直静默失效的「携带会话上下文」改为读取 `ctx.sessions` 事件窗口。macOS 端由 [@ruijiaang-lab](https://github.com/ruijiaang-lab) 开发。
+
+> 兼容 dsh 0.1.0-rc.7 → 0.2.1 全线（`engines.dsh` 声明并在启动期校验）。0.2.1 的适配不是"改到能跑"：上游把 `settings.plugin.item` 槽位删了、而 `SlotCore.register` 对未声明槽位是**同步抛错**，`slots.inject` 还会把回调异常升级成页面级未捕获错误——所以两个设置槽位必须拆成各自独立的 `inject`。这条边界现在由 `test/slot-guard.test.mjs` 直接 import 上游真实 `SlotCore` 固化。
 
 ### 🖥️ [we-for-vscode](https://github.com/Y1X1n/we-for-vscode) &nbsp;·&nbsp; <sub>Wallpaper Engine × VS Code</sub>
 
-<a href="https://github.com/Y1X1n/we-for-vscode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/we-for-vscode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" /> <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white" alt="WebGL" /> <img src="https://img.shields.io/badge/~9.1K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/15_tests-A78BFA?style=flat-square" alt="tests" />
+<a href="https://github.com/Y1X1n/we-for-vscode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/we-for-vscode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" /> <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white" alt="WebGL" /> <img src="https://img.shields.io/badge/~8.7K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/15_tests-A78BFA?style=flat-square" alt="tests" />
 
 液态玻璃（glassmorphism）壁纸面板铺满整窗；Scene / Web 壁纸**实时渲染**而非静图；WebGL 引擎打包进扩展，零外部依赖。代码量最大，也是目前唯一每天都在提交的项目：15 个测试文件、CHANGELOG、`docs/ENGINEERING-NOTES.zh.md` 工程笔记、双语 README。
 
 ### 🔐 [dsh-like-zcode](https://github.com/Y1X1n/dsh-like-zcode) &nbsp;·&nbsp; <sub>代码库全量备份，自建服务器</sub>
 
-<a href="https://github.com/Y1X1n/dsh-like-zcode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-like-zcode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/~5.0K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/9_tests-A78BFA?style=flat-square" alt="tests" /> <img src="https://img.shields.io/badge/MIT-10B981?style=flat-square" alt="MIT" />
+<a href="https://github.com/Y1X1n/dsh-like-zcode/stargazers"><img src="https://img.shields.io/github/stars/Y1X1n/dsh-like-zcode?style=flat-square&logo=github&label=%E2%AD%90%20Stars" alt="stars" /></a> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/~4.3K_LOC-22D3EE?style=flat-square" alt="LOC" /> <img src="https://img.shields.io/badge/8_tests-A78BFA?style=flat-square" alt="tests" /> <img src="https://img.shields.io/badge/MIT-10B981?style=flat-square" alt="MIT" />
 
 备份目的地由你自己填写，默认关闭，私钥在你手里，带宽你限速；会话内零通知，进度只在插件设置页。附 `docs/DESIGN.md` 与 `docs/BACKENDS.md`。
 
@@ -80,7 +82,7 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 
 ## 🛠️ 技术栈 / Tech Stack
 
-<p align="center"><sub><b>语言 / Languages</b> — 全部 11 个原创仓库，按实际代码量排序</sub></p>
+<p align="center"><sub><b>语言 / Languages</b> — 全部 17 个原创仓库，按实际代码量排序</sub></p>
 
 <div align="center">
 
@@ -92,9 +94,13 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 <br/>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+<img src="https://img.shields.io/badge/Vue-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue" />
+<br/>
 <img src="https://img.shields.io/badge/PowerShell-2C579C?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
 <img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Shell" />
+<img src="https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" />
 
 </div>
 
@@ -105,6 +111,8 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 <div align="center">
 
 <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+<img src="https://img.shields.io/badge/DeepSeek_Harness-4D6BFE?style=for-the-badge&logo=deepseek&logoColor=white" alt="DeepSeek Harness" />
+<img src="https://img.shields.io/badge/Cordis-22D3EE?style=for-the-badge" alt="Cordis" />
 <img src="https://img.shields.io/badge/WebGL-990000?style=for-the-badge&logo=webgl&logoColor=white" alt="WebGL" />
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
 <img src="https://img.shields.io/badge/glassmorphism-22D3EE?style=for-the-badge" alt="glassmorphism" />
@@ -122,7 +130,7 @@ No PR required, no formality. **Colour schemes, wallpaper-rendering edge cases, 
 </div>
 
 <p align="center">
-  <sub>DSH 插件基于官方 SDK <code>@deepseek-ai/dsh-settings</code> 与 <code>@deepseek-ai/schemastery</code> · PyInstaller 用于打包桌面发行版</sub>
+  <sub>DSH 插件基于 <code>@deepseek-ai/cordis</code> + <code>@deepseek-ai/schemastery</code>（Config schema）+ 各 <code>@deepseek-ai/dsh-client-ui-*</code> 槽位类型包 · PyInstaller 用于打包桌面发行版</sub>
 </p>
 
 ---
