@@ -36,7 +36,7 @@
 
 ### 💼 开放实习 / Open to internships
 
-**在校生** · 北京 / 全远程 · 方向 **AI Agent 与开发者工具**（DeepSeek Harness 生态）
+**在校生** · 北京 / 全远程 · 方向 **AI Agent 与开发者工具**
 Student · Beijing or fully remote · targeting **AI agents & developer tooling**
 
 | 可验证的 / Evidence | |
