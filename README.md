@@ -7,7 +7,7 @@
 
 <br/>
 
-<a href="mailto:1781688201@qq.com"><img src="https://img.shields.io/badge/%F0%9F%93%AC%201788201%40qq.com-22D3EE?style=flat-square&label=%E2%9C%89%20Mail&logo=maildotru&logoColor=black" alt="email" /></a> <img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" /> <img src="https://img.shields.io/badge/repos-22-A78BFA?style=flat-square&label=Repos" alt="repos" /> <img src="https://img.shields.io/badge/stars-40-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" /> <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
+<a href="mailto:1781688201@qq.com"><img src="https://img.shields.io/badge/%F0%9F%93%AC%201781688201%40qq.com-22D3EE?style=flat-square&label=%E2%9C%89%20Mail&logo=maildotru&logoColor=black" alt="email" /></a> <img src="https://komarev.com/ghpvc/?username=Y1X1n&color=22D3EE&style=flat-square&label=Visitors" alt="visitors" /> <img src="https://img.shields.io/badge/repos-22-A78BFA?style=flat-square&label=Repos" alt="repos" /> <img src="https://img.shields.io/badge/stars-40-F59E0B?style=flat-square&label=%E2%AD%90%20Stars" alt="stars" /> <img src="https://img.shields.io/github/followers/Y1X1n?style=flat-square&label=%F0%9F%91%A5%20Followers" alt="followers" />
 
 </div>
 
